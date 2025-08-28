@@ -1,13 +1,37 @@
+
+.header
+{
+    padding-top: 50px;
+    padding-bottom: 200px;
+}
+
+.footer
+{
+    padding-top: 50px;
+}
+
+.item
+{
+    padding-top: 100px;
+}
+
+
+
 body {
     background-color: black;
     color: white;
+    font-family: 'Lucida Console', Monaco, monospace;
+    margin-right: 20px;
+    margin-left: 20px;
 }
 
 a {
-    color: white;
+    color: yellow;
     text-decoration: underline;
 }
 
 a:hover {
-    color: gray;
+    color: darkred;
 }
+
+
