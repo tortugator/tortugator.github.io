@@ -14,16 +14,32 @@
 
 .item
 {
-    padding-bottom: 300px;
+    margin-bottom: 20px;
     text-align: left;
+    padding: 20px;
+    background-color: black;
 }
 
 .content
 {
     margin-right: 0px;
     margin-left: 0px;
-    background-color: black;
-    padding: 20px;
+    /*background-color: black;*/
+    padding: 0px;
+}
+
+
+.hat
+{
+    padding: 100px;
+    text-align: center;
+    /*background-color: black;*/
+    margin-bottom: 20px;
+}
+
+.hat img
+{
+    border-radius: 50%;
 }
 
 img
@@ -43,7 +59,13 @@ body {
     margin-right: 25%;
     margin-left: 25%;
     margin-top: 20px;
+    background-image: url("/image/cheezballs.jpg");
+    background-repeat: repeat-y;
+    background-size: 100% auto;
+    background-position: top center;
 }
+
+
 
 a {
     color: yellow;
@@ -52,6 +74,17 @@ a {
 
 a:hover {
     color: darkred;
+}
+
+
+
+@media (max-width: 800px)
+{
+  body
+  {
+    margin-right: 5%;
+    margin-left: 5%;
+  }
 }
 
 
