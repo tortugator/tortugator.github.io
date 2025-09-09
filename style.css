@@ -93,10 +93,13 @@ h3
 a {
     color: yellow;
     text-decoration: underline;
+    display: inline-block;
+    /*transition: transform 0.1s ease, color 0.1s ease;*/
 }
 
 a:hover {
     color: darkred;
+    transform: scale(1.2);
 }
 
 
