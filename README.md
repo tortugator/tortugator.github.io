@@ -1,2 +1,0 @@
-# HatFriend.com
-muh website
