@@ -38,7 +38,7 @@
 
 .hat {
   width: 100px;
-  perspective: 70px; /* gives it 3D depth */
+  perspective: 70px; 
   margin: 100px auto;
 }
 
