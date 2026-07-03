@@ -1,3 +1,17 @@
+.gallery {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.gallery img {
+    flex: 1;
+    aspect-ratio: 1 / 1;  /* or 4/3, 16/9, etc. */
+    width: 0;
+    object-fit: cover;
+}
+
+
 
 .header
 {
@@ -14,7 +28,7 @@
 
 .item
 {
-    margin-bottom: 20px;
+    margin-bottom: 800px;
     text-align: left;
     padding: 20px;
     background-color: rgba(0, 0, 0, 0.5);
@@ -69,9 +83,7 @@ img
     margin-right: auto;
 }
 
-img + img {
-  margin-top: 1rem; /* or margin-left/right/bottom depending on your layout */
-}
+
 
 
 body {
@@ -91,6 +103,10 @@ body {
 h3
 {
     text-align: right;
+}
+
+p {
+    font-size: large;
 }
 
 
