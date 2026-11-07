@@ -15,7 +15,7 @@
 
 .header
 {
-    background-color: rgb(121, 76, 36);
+    background-color: rgb(147, 60, 150);
     padding: 20px;
     margin-bottom: 20px;
 }
@@ -28,10 +28,10 @@
 
 .item
 {
-    margin-bottom: 800px;
+    margin-bottom: 20px;
     text-align: left;
     padding: 20px;
-    background-color: rgb(121, 76, 36);
+    background-color: rgb(147, 60, 150);
 }
 
 .content
@@ -71,7 +71,7 @@ img
 
 
 body {
-    background-color: rgb(200, 200, 150);
+    background-color: rgb(76, 2, 66);
     color: white;
     font-family: 'Lucida Console', Monaco, monospace;
     margin-right: 25%;
