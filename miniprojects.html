@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>HatFriend contact</title>
+    <title>projects</title>
     <link rel="stylesheet" href="/style.css">
     <link rel="icon" href="/favicon.ico" type="image/x-icon">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -20,13 +20,34 @@
         </p>
         <hr>
     </div>
+
+    <div class="item">
+        <h3>2026.11.23</h3>
+        <h2>Milling a PCB</h2>
+        <img src="/image/milledpcb.webp" alt="milled pcb"">
+        <p>Today, I tried using the PCB mill to make my own breakout board for TSSOP20 package. I want to produce a PCB that uses the STM32G031 chip that comes in TSSOP, but before I proceded, I thought it would be a good idea to see if the mill was even capable of milling a PCB for TSSOP. This is probably near the limit of the capabilities of the machine and I was not successful in this first attempt</p>
+        <h2>design</h2>
+        <img src="/image/milledpcbpreview.webp" alt="milled pcb preview" width="30%">
+        <p>I designed a simple PCB in KiCAD with just the header pins, an LED, and the chip itself. I had to keep in mind to not make the clearance between the traces too narrow because the endmill itself would need to be able to fit between those gaps. Although I set the minimum clearance to the lowest possible of 0.2mm in KiCAD, some parts were still too narrow, so I had to set the constraint to slightly more than 0.2mm. I also increased the track width since there was still a lot of empty space. I would not understand the importance of wide tracks in a milled PCB until later in the process.</p>
+        <p>The milling did not take much time. I was happy with the result. Here you can see how it turned out:</p>
+        <img src="/image/milledpcbblank.webp" alt="milled pcb blank" width="50%">
+        <h2>challenges</h2>
+        <p>The problems only started arising in the assembly process. I first wanted to try the hotplate method. This was not effective because the solder did not bond well with the copper when it melted. The material is probably oxidized or contaminated on the surface which affects the solders ability to bond with it. The hotplate left my PCB in a mess that probably contributed to the later failure.</p>
+        <p>After spending some time cleaning off the melted solder with an iron, my next attempt was using the hot air station. This was more effective than the hot plate but I still had to go in with the iron and a lot of flux to clean everything up. I tested for continuity along the leads and to make check if any adjacent leads were shorted. Most of these issues could just be fixed by applying flux and remelting the solder. This material was definitely much harder to work with compared to regular PCBs.</p>
+        <p>Finally, once the hard part was over, I went on to solder the header pins. However, even thought I thought this would be the easiest part, it is actually where I really messed up. I was getting some very big balls of solder on the pads because the solder would not want to bond to the surface. After doing all the pins, I checked for shorts and there were so many. I fixed these by removing some solder with the wick. However, for one some of the pins, I ended up ripping off the whole copper layer making that pin unusable.</p>
+        <img src="/image/rippedpads.webp" alt="rippedpads   " width="50%">
+        <p>When I went to check the datasheet for the pinout, I realized that one of the destroyed pads was the programming pin, so I just gave up on the whole board. The adhesive between the copper and the board was probably weakened by all the reheating which contributed to it pulling off. I guess that is one disadvantage of these milled PCBs.</p>
+        <h2>future solutions</h2>
+        <p>I want to try doing this again another day, but I will probably just go in with an iron from the start. The iron puts the least heat stress on the board and the components. Also, from the picture above you can see that the ground plane between the tracks is not milled out. This ground plane is useless and only increases the chance of shorting, so it would be better to just mill it off. Finally, I will try making the tracks and the pad diameter even wider. With these improvements, I should be able to make a successful board on the mill.</p>
+        <p>However, for future more complex PCBs with small traces, I probably would not go with the mill and instead just have them be professionally manufactured. Creating a product with the mill just introduces unnecessary problems which is the thing I least want when testing a new PCB.</p>
+    </div>
     
 
     <div class="item">
         <h3>2026.11.21</h3>
         <h2>Knob Fun</h2>
-        <img src="/image/knobfun.webp" alt="knobfun">
         <p>Another project involving the STM32G031.</p>
+        <img src="/image/knobfun.webp" alt="knobfun">
         <p>Last time I did a project with STM32 I used CubeIDE, but it was slow and buggy. Now I am using cmake for building and openocd for flashing, so I can do everything from the command line which is much faster. I still have to use CubeMX for configuration, but there are no issues with that.</p>
         <p>The tiny TSSOP legs are soldered by hand again. I think my skills have improved :D</p>
         <p>The board is just a simple breakout board to plug into the breadboard. It feels pretty satisfying to just have a bare chip and to interact directly with the pads instead of a dev board which adds unnecessary abstraction. Eventually, I want to develop this into a PCB as well. The idea is that its a calculator that uses the knob to select the number and the display is in binary.</p>
